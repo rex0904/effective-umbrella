@@ -59,6 +59,30 @@ RESPONSES = {
         "What do you like most about your friends?",
         "Do your friends feel the same way?",
     ],
+        "music": [
+        "What kind of music do you listen to?",
+        "Do you have a favorite song?"
+    ],
+
+    "games": [
+        "What is your favorite video game?",
+        "Do you prefer playing alone or with friends?"
+    ],
+
+    "movies": [
+        "What is your favorite movie?",
+        "Do you prefer action or comedy movies?",
+    ],
+
+    "sleep": [
+        "Do you usually get enough sleep?",
+        "What time do you normally go to bed?",
+    ],
+
+    "travel": [
+        "Where would you like to travel?",
+        "What is the best place you have ever visited?"
+    ]
 }
 
 DEFAULT_RESPONSES = [

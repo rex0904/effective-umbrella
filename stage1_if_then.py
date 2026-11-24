@@ -31,6 +31,12 @@ while True:
         print(f"{BOT_NAME}: I am sorry to hear that. Why do you feel sad?")
     elif "school" in user_input:
         print(f"{BOT_NAME}: Tell me more about school.")
+    elif "sports" in user_input:
+        print(f"{BOT_NAME}: What sports do you enjoy playing?")
+    elif "happy" in user_input:
+        print(f"{BOT_NAME}: That's great! What made you happy?")
+    elif "tired" in user_input:
+        print(f"{BOT_NAME}: Have you been getting enough sleep?")
     # TODO 2: add at least 3 more `elif` rules about topics YOU choose.
     # TODO 3: make one of your rules react to TWO different words (use `or`).
     else:
@@ -43,5 +49,7 @@ while True:
 # Run the bot and type:   this is hard
 # Why does the bot say "Hello!"?  (Hint: what does `"hi" in "this"` give you?)
 # Write your guess here:
+#
+# The bot says "Hello!" because "hi" is contained inside the word "this".
 #
 # We will fix this properly in Stage 2 by breaking the sentence into WORDS.

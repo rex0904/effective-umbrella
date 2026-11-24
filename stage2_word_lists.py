@@ -26,10 +26,17 @@ def clean_words(text):
 def get_reply(user_input):
     """The bot's brain: take the user's text, return a reply (a string)."""
     words = clean_words(user_input)
+    topics = []
 
     for word in words:
         if word in RESPONSES:
-            return random.choice(RESPONSES[word])
+            topics.append(word)
+
+    if topics:
+        chosen_topic = random.choice(topics)
+        return random.choice(RESPONSES[chosen_topic])
+
+    return random.choice(DEFAULT_RESPONSES)
             # TODO 2: What if the user mentions TWO topics ("school and sports")?
             # Right now the bot only answers the FIRST one. Could you collect
             # all the topics in a list instead, and then pick one at random?
@@ -53,5 +60,9 @@ if __name__ == "__main__":
 # CHECKPOINT: type "this is hard". Does the bot still say "Hello"? (It should
 #             not. Why is that fixed now?)
 #
+# Because clean_words() splits the sentence into individual words.
+#
 # THINK: type "I love my mom". The bot ignores "mom". Why? How could we teach
 #        it that "mom" belongs with "family"? (Stage 4 answers this.)
+#
+# The bot ignores "mom" because it is not currently a key in the RESPONSES dictionary. To teach it that "mom" belongs with "family", we would need to create a connection between related words
